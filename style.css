@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000; /* noir */
-  height: 100vh;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,8 @@ body {
 }
 
 .logo {
-  max-width: 20vw;
-  max-height: 20vh;
+  max-width: 200px;
+  max-height: 200px;
   width: auto;
   height: auto;
 
@@ -26,12 +26,12 @@ body {
 /* Définition de l'animation */
 @keyframes blink {
   0% {
-    opacity: 0;
+    opacity: 0.2;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
