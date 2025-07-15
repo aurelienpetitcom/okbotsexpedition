@@ -1,0 +1,37 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* noir */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-logo {
+  text-align: center;
+}
+
+.logo {
+  max-width: 20vw;
+  max-height: 20vh;
+  width: auto;
+  height: auto;
+
+  /* Animation de clignotement */
+  animation: blink 3s infinite ease-in-out;
+}
+
+/* Définition de l'animation */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
