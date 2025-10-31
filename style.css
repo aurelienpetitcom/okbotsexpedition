@@ -238,7 +238,7 @@ h5 {
     position: absolute;
     top: 350px;
     left: 50%;
-    width: 500px;
+    width: 450px;
     z-index: 2;
     pointer-events: none;
     transform: translate(-50%, -50%);
