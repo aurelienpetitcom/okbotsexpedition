@@ -8,10 +8,114 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+<!-- Meta description pour Google (par défaut FR) -->
+<meta id="meta-desc" name="description"
+    content="Okbots Expedition is a narrative platformer game project produced on Unreal Engine 5.">
+
+<!-- Favicon & icônes -->
+<link rel="icon" href="/favicon.ico" sizes="any"> <!-- version classique -->
+<link rel="icon" href="/images/faviconap.png" type="image/png"> <!-- version PNG -->
+<link rel="apple-touch-icon" href="/images/faviconap.png"> <!-- iOS/Apple -->
+<link rel="manifest" href="/site.webmanifest"> <!-- optionnel PWA -->
+
+<!-- Feuille de style -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- Données structurées : logo de site pour Google -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://okbotsexpedition.com",
+    "name": "Aurélien Petit",
+    "logo": "https://okbotsexpedition.com/images/faviconap.png"
+  }
+  </script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HEM24T99FD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HEM24T99FD');
+</script>
+
+<!-- Script pour changer titre/meta en fonction de la langue -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const userLang = navigator.language || navigator.userLanguage;
+        const titleEl = document.getElementById("page-title");
+        const descEl = document.getElementById("meta-desc");
+
+        if (userLang.startsWith("en")) {
+            titleEl.textContent = "Okbots Expedition";
+            descEl.setAttribute("content", "Okbots Expedition is a narrative platformer game project produced on Unreal Engine 5.");
+        }
+    });
+</script>
+</head>
+
+<!-- Ecran de chargement -->
+
 <body>
-    <div class="centered-logo">
-        <img src="images/Logo blanc Okbots Expedition.png" alt="Logo Okbots" class="logo" />
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="https://aurelienpetit.com" id="navbar__logo">
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <select id="langSelector">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Video Banner -->
+    <div class="video-banner">
+        <!-- <video autoplay muted loop playsinline class="background-video">
+            <source src="images/video.webm" type="video/webm">
+        </video>-->
+        <img src="images/imagevideo.png" alt="Logo Okbots Expedition" class="background-video">
+
+        <img src="images/Logo blanc Okbots Expedition.png" alt="Logo Okbots Expedition" class="video-logo">
     </div>
+
+    <div class="text-banner">
+        <p data-lang="en">Okbots Expedition is a narrative platform game made on Unreal Engine 5. Your role is to
+            penetrate the Okbots
+            civilization, intelligent robots designed by humans and send them to find another habitable solar system, to
+            prevent them from overtaking humanity.</p>
+
+        <p data-lang="fr">Okbots Expedition est un jeu de plateforme narratif développé sous Unreal Engine 5. Votre rôle
+            est de infiltrer la civilisation des Okbots, des robots intelligents conçus par les humains, et de les
+            envoyer à la recherche d'un autre système solaire
+            habitable, afin de les empêcher de supplanter l'humanité.</p>
+    </div>
+
+    <div class="main__container-bandebp">
+        <a href="https://aurelienpetit.com" id="navbar__logo_bp">
+            <img src="images/logoap.png" alt="Logo Aurélien Petit" class="logo">
+        </a>
+        <h5 data-lang="en">Copyright © 2025 Aurélien Petit. All rights reserved.</h5>
+        <h5 data-lang="fr" style="display:none;">Copyright © 2025 Aurélien Petit. Tous droits réservés.</h5>
+    </div>
+    <!-- Contenu de la page -->
+    <div class="main">
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
