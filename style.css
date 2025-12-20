@@ -260,3 +260,22 @@ h5 {
   height: auto;
   cursor: pointer;
 }
+
+.main-video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.main-video {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main-video-container iframe {
+  border-radius: 20px;
+  overflow: hidden;
+}
